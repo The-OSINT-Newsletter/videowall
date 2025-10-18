@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Wall</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Video Wall</h1>
+        <div class="controls">
+            <div class="youtube-input">
+                <input type="text" id="youtubeInput" placeholder="Paste YouTube URL or Video ID">
+                <button id="addYoutubeBtn" class="btn btn-secondary">Add YouTube Video</button>
+            </div>
+            <button id="clearAllBtn" class="btn btn-danger">Clear All</button>
+        </div>
+        <button id="mapToggleBtn" class="map-toggle-btn" title="Toggle Map View">🌍</button>
+    </div>
+
+    <div class="main-content">
+        <div class="video-grid" id="videoGrid">
+            <div class="empty-state">
+                <h2>Welcome to Video Wall</h2>
+                <p>Add YouTube videos to get started!</p>
+                <div class="instructions">
+                    <div class="instruction">
+                        <strong>📺 Add YouTube:</strong> Paste any YouTube URL (e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="map-view" id="mapView" style="display: none;">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
